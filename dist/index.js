@@ -18,9 +18,9 @@ const num9 = document.getElementById('num9');
 const num0 = document.getElementById('num0');
 //////////////////////////////////
    //operations variables
-   const equales = document.getAnimations('equales');
-   const minus = document.getElementsByClassName('minus');
-   const plus = document.getElementsByClassName('plus');
+   const equales = document.getElementById('equales');
+   const minus = document.getElementById('minus');
+   const plus = document.getElementById('plus');
    const del = document.getElementById('delete');
    const times = document.getElementById('times');
    const division = document.getElementById('division');
@@ -33,6 +33,11 @@ const num0 = document.getElementById('num0');
 
 
    //event listeners
+c.addEventListener('click',function(){
+    input.innerHTML=''
+})
+
+
 num1.addEventListener('click',function(){
     input.innerHTML += 1
 })
@@ -63,4 +68,16 @@ num9.addEventListener('click',function(){
 })
 num0.addEventListener('click',function(){
     input.innerHTML += 0
+})
+plus.addEventListener('click',function(){
+    input.innerHTML += '+'
+})
+minus.addEventListener('click',function(){
+    input.innerHTML += '-'
+})
+times.addEventListener('click',function(){
+    input.innerHTML += '×'
+})
+division.addEventListener('click',function(){
+    input.innerHTML += '/'
 })

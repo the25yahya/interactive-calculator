@@ -132,7 +132,7 @@ body {
   flex-direction: column;
 }
 
-.equals {
+#equals {
   flex-basis: 50%;
   display: grid;
   place-items: center;
@@ -142,7 +142,7 @@ body {
   cursor: pointer;
 }
 
-.plus {
+#plus {
   background-color: black;
   color: white;
   flex-basis: 25%;
@@ -154,7 +154,7 @@ body {
   cursor: pointer;
 }
 
-.minus {
+#minus {
   background-color: black;
   color: white;
   flex-basis: 25%;
