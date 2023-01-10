@@ -1,0 +1,48 @@
+*{margin: 0%;
+padding: 0%;}
+/*==============================*/ 
+            /*variables*/
+
+
+/*================================*/
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+};
+.input-holder{
+    background-color: red;
+    grid-area: input-alias;
+}
+.options{
+    background-color: aqua;
+    grid-area: options-alias;
+}
+.numbers{
+    background-color: black;
+    grid-area: numbers-alias;
+}
+.options2{
+    grid-area: options2;
+    background-color: blue;
+}
+.container{
+    background-color: white;
+    width: 350px;
+    height: 600px;
+    margin: 30px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-template-areas:"input-alias input-alias input-alias input-alias"
+    "input-alias input-alias input-alias input-alias"
+    "options-alias options-alias options-alias options-alias"
+    "options-alias options-alias options-alias options-alias"
+    "numbers-alias numbers-alias numbers-alias options2"
+    "numbers-alias numbers-alias numbers-alias options2"
+    "numbers-alias numbers-alias numbers-alias options2"
+    "numbers-alias numbers-alias numbers-alias options2"
+     ;
+}
