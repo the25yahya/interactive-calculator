@@ -14,6 +14,8 @@ const num7 = document.getElementById('num7');
 const num8 = document.getElementById('num8');
 const num9 = document.getElementById('num9');
 const num0 = document.getElementById('num0');
+const majul = document.getElementById('majuluse');
+const point = document.getElementById('point');
 //////////////////////////////////
    //operations variables
    const equals = document.getElementById('equals');
@@ -78,6 +80,12 @@ minus.addEventListener('click',function(){
 fac.addEventListener('click',function(){
     input.innerText+='!'
 })
+point.addEventListener('click',function(){
+    input.innerText += '.'
+})
+majul.addEventListener('click',function(){
+    input.innerText += '%'
+})
 times.addEventListener('click',function(){
     input.innerText += '*'
 })
@@ -89,6 +97,9 @@ equals.addEventListener('click',function(){
         const value = input.innerText;
         const result = eval(value);
         input.innerText = result
+        if(result === undefined){
+            input.innerText=''
+        }
     } catch (error) {
         input.classList.add("error");
         setTimeout(() => {
@@ -101,4 +112,8 @@ del.addEventListener('click',function(){
     if (input.innerText.length > 0) {
         input.innerText = input.innerText.substring(0, input.innerText.length - 1);
     }
+})
+
+exp.addEventListener('click',function(){
+    input.innerText='Math.exp(3)'
 })
