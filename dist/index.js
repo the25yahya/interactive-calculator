@@ -2,8 +2,6 @@
 
 //input
 const input = document.querySelector('.input');
-let value = input.innerHTML
-
 
 /////////////////////////////////
 const num1 = document.getElementById('num1');
@@ -18,7 +16,8 @@ const num9 = document.getElementById('num9');
 const num0 = document.getElementById('num0');
 //////////////////////////////////
    //operations variables
-   const equales = document.getElementById('equales');
+   const equals = document.getElementById('equals');
+   console.log(equals);
    const minus = document.getElementById('minus');
    const plus = document.getElementById('plus');
    const del = document.getElementById('delete');
@@ -33,51 +32,73 @@ const num0 = document.getElementById('num0');
 
 
    //event listeners
+
 c.addEventListener('click',function(){
-    input.innerHTML=''
+    input.innerText=''
 })
 
 
 num1.addEventListener('click',function(){
-    input.innerHTML += 1
+    input.innerText += 1
 })
 num2.addEventListener('click',function(){
-    input.innerHTML += 2
+    input.innerText += 2
 })
  
 num3.addEventListener('click',function(){
-    input.innerHTML += 3
+    input.innerText += 3
 })
 num4.addEventListener('click',function(){
-    input.innerHTML += 4
+    input.innerText += 4
 })
 num5.addEventListener('click',function(){
-    input.innerHTML += 5
+    input.innerText += 5
 })            
 num6.addEventListener('click',function(){
-    input.innerHTML += 6
+    input.innerText += 6
 })
 num7.addEventListener('click',function(){
-    input.innerHTML += 7
+    input.innerText += 7
 })
 num8.addEventListener('click',function(){
-    input.innerHTML += 8
+    input.innerText += 8
 })
 num9.addEventListener('click',function(){
-    input.innerHTML += 9
+    input.innerText += 9
 })
 num0.addEventListener('click',function(){
-    input.innerHTML += 0
+    input.innerText += 0
 })
 plus.addEventListener('click',function(){
-    input.innerHTML += '+'
+    input.innerText += '+'
 })
 minus.addEventListener('click',function(){
-    input.innerHTML += '-'
+    input.innerText += '-'
+})
+fac.addEventListener('click',function(){
+    input.innerText+='!'
 })
 times.addEventListener('click',function(){
-    input.innerHTML += '×'
+    input.innerText += '*'
 })
 division.addEventListener('click',function(){
-    input.innerHTML += '/'
+    input.innerText += '/'
+})
+equals.addEventListener('click',function(){
+    try{
+        const value = input.innerText;
+        const result = eval(value);
+        input.innerText = result
+    } catch (error) {
+        input.classList.add("error");
+        setTimeout(() => {
+          input.classList.remove("error");
+        }, 2000);
+      }
+    });
+
+del.addEventListener('click',function(){
+    if (input.innerText.length > 0) {
+        input.innerText = input.innerText.substring(0, input.innerText.length - 1);
+    }
 })
